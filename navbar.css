@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw0aXpsog.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+body{
+    background-color: #E0E0E0;
+    /*min height to push footer to bottom*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat";
+    word-wrap: break-word;  
+}
+
+ 
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Navbar hamburger custom colour*/
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-brand{
+    font-size: large;
+
+  }
+
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #E0E0E0;
+  }
+
+ .dropdown:hover>.dropdown-menu {
+    display: block;
+
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    text-decoration: underline;
+    background-color: #7c5be8;
+  }
+
+.navbar{
+    display:flex;
+    background-color: #33292F;
+    overflow: visible;
+}
+
+.sitename{
+    padding: 5px 30px;
+    color:#DCDCDC;
+}
+
+.site-menu{
+    padding: 10px 30px;
+    margin-left: 100px;
+}
+
+a{
+    color: #DCDCDC;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    display:block;
+    margin:0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+.space{
+    margin-top: 5em;
+}
+
+
+@media only screen and (max-width: 1360){
+    #navdiv{
+        width: 90%;
+    }
+}
+
+/* footer background */
+footer{
+  background-color: #1e1e1e;
+  margin-top: auto;
+}
+
+.footerContainer{
+  width:100%;
+  padding: 60px 30px 20px
+}
+
+.socialIcons{
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #E0E0E0;
+  margin: 10px;
+  border-radius: 30%;
+}
+
+.socialIcons a i{
+  font-size: 2em;
+  color: #33292F;
+  opacity: 0.8;
+}
+
+/*hover effects*/
+.socialIcons a:hover{
+  background-color: #E0E0E0;
+  transition: .5s;
+}
+
+.socialIcons a:hover i{
+  color: #33292F;
+  transition: .5s;
+}
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footerNav ul li a{
+  color:#E0E0E0;
+  margin: 20px;
+  font-size: 1.4em;
+  opacity: 0.6;
+  transition: .5s;
+}

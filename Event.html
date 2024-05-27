@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!--Must have for responsive website-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--To name the website-->
+  <title>EndBadmintonAcademy</title>
+  <!-- Bootstrap scripts and stylesheet-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Homestyle.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- NAVBAR STYLE -->
+  <link href="navbar.css" rel="stylesheet"/>
+  <!-- ICON IMAGE -->
+  <link href="images/iconBirdie.png" rel="icon" type="image/png"> 
+  <!-- TABLE SCRIPT --> 
+  <script src="scripts/eventpageScript.js"></script>
+  <!-- OPENS BOOKING PAGE -->
+  <script>
+    function BookingOpen(){
+      location.href = "BookNow.html";
+    }
+  </script>
+
+</head>
+
+
+<header>
+  <div>
+    <!--modifying navbar on https://getbootstrap.com/docs/5.0/components/navbar/-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">EndBadminton</a>
+        <button class="navbar-toggler custom-toggler" style="color: antiquewhite;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-sm-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">AboutUs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="OurTeam.html">OurTeam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Location.html">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Event</a>
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" onclick="BookingOpen()"
+              id="dropdownMenubtn" 
+              data-mdb-toggle="dropdown" 
+              aria-expanded="false"
+              style="text-align: center; padding: 12px; float: left; margin-left: 1em;">
+              BookNow</button>
+              <div style="margin-top: 3em;"></div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenubtn">
+                <li><a style="color: black;" class="dropdown-item" href="bookingSites/consultation.html">Consultation Class</a></li>
+                <li><a style="color: black;" class="dropdown-item" href="bookingSites/academy.html">Academy Class</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- loadPage() runs script to populate table with pre-set entrants -->
+<body onload="loadPage()">
+  <div class="space"></div>
+
+  <div>
+    <h1 style="text-align: center;"><strong>Whats On?</strong></h1>
+    <h2><strong>Hosting our first Tournament!</strong></h2>
+    <div>
+      <div>
+        <img src="images/poster.jpg" alt="badminton tournament poster" style="width: 50%; text-align: right;">
+      </div>
+
+      <div style="margin-top: 1em;">
+        <h4>More info</h4>
+        <p style="text-align: center; margin-right: 4em; margin-left: 4em;">We are thrilled to announce the hosting of our first-ever badminton tournament! Prepare to witness an electrifying display of skill, agility, and sportsmanship as players from across the region gather for an unforgettable badminton showdown. Join us for a day of intense competition, camaraderie, and thrilling matches that will leave you on the edge of your seat.</p>
+        
+        <h4>Sign up below!</h4>
+        <p>*note that to remove yourself from the entry contact an adminstrater or email:<a href="mailto: dontemailthisemail@yahoo.com" style="color: blue;">dontemailthisemail@yahoo.com</a></p>
+        <!-- sign up form which adds to the table below-->
+        <div id="SigningUP">
+          <form id="dataInput">
+            <input type="number" id="Text1" placeholder="playerID">
+            <input type="text" id="Text2" placeholder="Name">
+            <select id="Text3">
+              <option value="U13">U13</option>
+              <option value="U15">U15</option>
+              <option value="U17">U17</option>
+              <option value="U18">U18</option>
+            </select>
+            <button type="button" onclick="addData()">submit</button>
+          </form>
+  
+          <form id="tableForm">
+            <label for="table_style">Choose a style:</label>
+            <select id="table_style">
+              <option value="table-bordered" selected>Default Table</option>
+              <option value="table-striped">Striped Table</option>
+              <option value="table-hover">Hover Table</option>
+              <option value="table-dark">Dark Table</option>
+            </select>
+            <button id="apply" type="button" onclick="styleChange()">Apply</button>
+          </form>
+        
+          <!-- table info is being added to -->
+          <table id="infoTable" class="table table-bordered" style="align-self: center;">
+            <th style="width: 10%;">Player No.</th>
+            <th>Name</th>
+            <th>Age</th>
+    
+            <tbody id="rows">
+            </tbody>
+              
+          </table>
+        </div>
+      
+      
+      </div> 
+    </div>
+  </div>
+  
+
+  <div class="space"></div>
+
+  <div id="eventMainBody" style="margin-right: 2%; margin-left: 2%;">
+    <h1 style="text-align: center;"><strong>Guidelines</strong></h1>
+
+    <div id="EventsPageRules" class="center">
+      <section>
+        <article>
+          <img src="images/crossracket.png" alt="crossed badminton rackets" class="mascotimg" style="width: 30%; ;">
+          <h3 style="margin-bottom: 1em;">Community and Badminton Events:</h3></strong>
+          <p style="text-align: left;">⚫ Connect with fellow badminton enthusiasts in our vibrant community.<br>⚫ Share your experiences, ask questions, and engage in discussions.<br>⚫ Participate in contests, challenges, and giveaways</p>
+          
+        </article>
+      </section>
+      
+    </div>
+
+  </div>
+  <div class="space"></div>
+    
+</body>
+<footer>
+  <div class="footerContainer">
+    <div class="socialIcons">
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.google.com/search?q=google%2B&oq=google%2B&aqs=chrome..69i57j0i512l5j69i60l2.1332j0j9&sourceid=chrome&ie=UTF-8"><i class="fa-brands fa-google-plus"></i></a>
+    </div>
+    <div class="footerNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">AboutUs</a></li>
+        <li><a href="OurTeam.html">OurTeam</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Location.html">Location</a></li>
+        <li><a href="Event.html">Event</a></li>
+      </ul>
+    </div>
+    <div class="footerBottom">
+      <p style="color: #7c5be8; text-align: center;">Copyright &copy;2023; Designed by <span class="designer">myself :)</span> </p>
+    </div>
+  </div>
+</footer>
+</html> 
