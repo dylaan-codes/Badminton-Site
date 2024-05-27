@@ -1,0 +1,135 @@
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+
+
+#heroBanner{
+  width: 100%;
+  height: auto;
+  max-width: 2000px;
+  background-color: #555;
+}
+
+  @media screen and (min-width: 501px){
+    #HBimg{
+      width: 100%;
+      height: auto;
+      max-width: 1250px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    #HBimg{
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    #potential{
+      position: absolute;
+      bottom: 15%;
+      left: 15%;
+    }
+  }
+
+h1, p, div{
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+h1{
+  font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Making a table for pictures.*/
+.row{
+  min-height: 200px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+}
+
+*{
+  word-wrap: break-word;
+}
+
+/* Image Text for Hero Banner*/
+.container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.top-left {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+
+#mrTable td{
+  column-gap: 5%;
+}
+
+/*mascot section*/
+section{
+  border-radius: 1em;
+  border: solid 1px #999;
+  padding: .5em 0;
+  gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.mascotimg{
+  border-radius: 50%;
+  border: solid 2px #fff;
+  box-shadow: 0 4px 4px #999;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+blockquote{
+  font: italic 2em;
+  margin-bottom: 1em
+}
+
+article{
+  width: 50%;
+}
+
+/* To put image and text side by side: EventPage, */
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  
+}  
+
+.flex-child:first-child {
+  margin-right: 0px;
+  margin-left: 1em;
+} 
+

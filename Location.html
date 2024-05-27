@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Must have for responsive website-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--To name the website-->
+  <title>EndBadmintonAcademy</title>
+  <!-- Bootstrap scripts and stylesheet-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Homestyle.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!--NAVBAR STYLE-->
+  <link href="navbar.css" rel="stylesheet"/> 
+  <!-- ICON IMAGE -->
+  <link href="images/iconBirdie.png" rel="icon" type="image/png">  
+  <!-- OPENS BOOKING PAGE -->
+  <script>
+    function BookingOpen(){
+      location.href = "BookNow.html";
+    }
+  </script>
+
+</head>
+<header>
+  <div>
+    <!--modifying navbar on https://getbootstrap.com/docs/5.0/components/navbar/-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">EndBadminton</a>
+        <button class="navbar-toggler custom-toggler" style="color: antiquewhite;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-sm-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">AboutUs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="OurTeam.html">OurTeam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Event.html">Event</a>
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" onclick="BookingOpen()"
+              id="dropdownMenubtn" 
+              data-mdb-toggle="dropdown" 
+              aria-expanded="false"
+              style="text-align: center; padding: 12px; float: left; margin-left: 1em;">
+              BookNow</button>
+              <div style="margin-top: 3em;"></div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenubtn">
+                <li><a style="color: black;" class="dropdown-item" href="bookingSites/consultation.html">Consultation Class</a></li>
+                <li><a style="color: black;" class="dropdown-item" href="bookingSites/academy.html">Academy Class</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<body>
+  <div class="space"></div>
+  <h1 style="text-align: center;"><strong>Location</strong></h1>
+  <div style="margin-top: 2rem; height: 80vh;overflow: hidden;display: flex;justify-content: center;align-items: center;">
+    <div style="float:left; margin-left: 6rem;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.6733152280226!2d-0.9930222842120583!3d51.994607729718105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876e2eaf46943c5%3A0x55ee1f643aa493c9!2sUniversity%20of%20Buckingham%20Chandos%20Road%20Building!5e0!3m2!1sen!2suk!4v1686269372545!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div style="float:left; margin-left: 10rem;">
+      <h4 class="center" style="text-align: center; margin-bottom: 12px;">Current base of operations:</h4>
+      <ul>
+        <li><pre>We are a university.</pre></li>
+        <li><pre>Playing casually in the lunch room.</pre></li>
+        <li><pre>Think you are good enough? 1v1 me.</pre></li>
+        <li><pre>Follow directions on google map, 8pm everyday.</pre></li>
+      </ul>
+      <p>To get in contact email: <a href="mailto: no@aliexpress.com" style="color: blue;">no@aliexpress.com</a></p>
+    </div>
+    
+  </div>
+  
+
+</body>
+<footer>
+  <div class="footerContainer">
+    <div class="socialIcons">
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.google.com/search?q=google%2B&oq=google%2B&aqs=chrome..69i57j0i512l5j69i60l2.1332j0j9&sourceid=chrome&ie=UTF-8"><i class="fa-brands fa-google-plus"></i></a>
+    </div>
+    <div class="footerNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">AboutUs</a></li>
+        <li><a href="OurTeam.html">OurTeam</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Location.html">Location</a></li>
+        <li><a href="Event.html">Event</a></li>
+      </ul>
+    </div>
+    <div class="footerBottom">
+      <p style="color: #7c5be8; text-align: center;">Copyright &copy;2023; Designed by <span class="designer">myself :)</span> </p>
+    </div>
+  </div>
+</footer>
+</html> 
